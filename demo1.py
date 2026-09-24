@@ -43,7 +43,7 @@ client = TypeSafeClient()  # reads TYPESAFE_API_KEY automatically
 
 # This is the text a customer sent us. In a real app this would come from email, chat, etc.
 message = "Anna, I paid twice for the course. Please help."
-# Swap to this for the second run on camera:
+# Try another message: this one should go to the "tech" team.
 # message = "I cannot log in to the app."
 # (To try it: put a "#" in front of the first message line and remove the "#" from this one.)
 
@@ -92,7 +92,7 @@ team = response.answers["team"]
 # Print an empty line so the output is easier to read.
 print()
 
-# Show the message we sent, so the viewer knows what Jev was reading.
+# Show the message we sent, so you can see what Jev was reading.
 print("Message    :", message)
 
 # team.choice is the option Jev picked, for example "payments".
