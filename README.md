@@ -36,6 +36,34 @@ come back with low confidence, which is how you know to hand it to a person.
 
 > Windows tip: if Tamil text shows up as boxes, run `chcp 65001` first or use the VS Code terminal.
 
+## Glossary (new to this? start here)
+
+| Term | What it means |
+|------|---------------|
+| **TypeSafe AI** | The company that makes Jev. Its [website](https://typesafe.ai) is where you get your API key. |
+| **Jev** | TypeSafe AI's model that these demos call. You give it text and questions, and it gives you answers your code can use directly. |
+| **System One** | TypeSafe's name for fast, instinctive judgments, like the quick "gut feel" a person has when reading a message. In code, you call it with `client.system_one(...)`. |
+| **SDK** | Software Development Kit. A Python package (`typesafe-sdk`) that does the work of talking to TypeSafe's servers, so you don't have to. |
+| **API** | Application Programming Interface. The way one program asks another program (here, TypeSafe's servers) to do something over the internet. |
+| **API key** | A secret password that tells TypeSafe the request is from you. Anyone who has your key can use your account, so keep it private. |
+| **Client** | The `TypeSafeClient()` object in the code. You send every request to Jev through it. |
+| **State** | The information Jev should read. In these demos, that's the customer's message. |
+| **Question** | What you want Jev to decide about the state. You can ask several in one call. |
+| **Choice** | A question type where Jev has to pick **one** option from a list you provide, such as `payments`, `tech` or `courses`. |
+| **Criteria** | The options for a `Choice`, each with a short description that helps Jev tell them apart. |
+| **Noul** | A yes/no question type. The answer is a number between 0 and 1: `0` means "definitely no", `1` means "definitely yes" and `0.5` means "unsure". |
+| **Probability** | A number between 0 and 1 showing how likely something is. For example, `0.97` means 97%. |
+| **Confidence** | The probability Jev gives to the option it chose. High confidence means Jev is sure. Low confidence means a person should check. |
+| **Threshold** | A cut-off number *your* code picks, such as "route automatically if confidence is 0.90 or higher". `demo2.py` uses thresholds for its traffic light. |
+| **Latency / ms** | How long a call takes, measured in milliseconds (1000 ms = 1 second). |
+| **Environment variable** | A named value that a program can read from outside its code. The SDK looks for one called `TYPESAFE_API_KEY`. |
+| **`.env` file** | A text file holding environment variables, one `NAME=value` per line. It lives on your computer and is **never** pushed to GitHub. |
+| **`.env.example`** | A template for `.env` that only has placeholder values. It is pushed to GitHub so people know which settings they need. |
+| **`python-dotenv` / `load_dotenv()`** | The package and function that read your `.env` file when the program starts. |
+| **`.gitignore`** | A list of files that git should never track. `.env` is on this list, which keeps your key off GitHub. |
+| **`requirements.txt`** | The list of Python packages this project needs. `pip install -r requirements.txt` installs all of them. |
+| **Tanglish** | Tamil written in English (Latin) letters, as in "rendu thadava pay panniten". It's common in chats and text messages. |
+
 ## Setup
 
 ### 1. Get a TypeSafe AI API key
