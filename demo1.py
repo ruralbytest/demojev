@@ -42,7 +42,7 @@ client = TypeSafeClient()  # reads TYPESAFE_API_KEY automatically
 # ---------------------------------------------------------------------------
 
 # This is the text a customer sent us. In a real app this would come from email, chat, etc.
-message = "Anna, I paid twice for the course. Please help."
+message = "I paid twice for the course. Please help."
 # Try another message: this one should go to the "tech" team.
 # message = "I cannot log in to the app."
 # (To try it: put a "#" in front of the first message line and remove the "#" from this one.)

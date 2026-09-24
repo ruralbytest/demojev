@@ -36,7 +36,7 @@ load_dotenv()  # loads TYPESAFE_API_KEY from the .env file
 client = TypeSafeClient()  # reads TYPESAFE_API_KEY automatically
 
 # The customer message we want Jev to understand.
-message = "Anna, I paid twice for the course. Please help."
+message = "I paid twice for the course. Please help."
 
 # ---------------------------------------------------------------------------
 # Ask Jev three questions in a single call
